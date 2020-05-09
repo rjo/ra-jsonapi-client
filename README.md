@@ -14,6 +14,7 @@ Currently these actions are supported:
 * `CREATE`
 * `UPDATE`
 * `DELETE`
+* `DELETE_MANY`
 * `GET_MANY`
 * `GET_MANY_REFERENCE`
 
@@ -144,8 +145,8 @@ the settings:
 }
 ```
 
-### Array format for `GET_MANY` filter
-This package makes usage of the aweseome `qs` querystring parsing library.
+### Array format for `GET_MANY` and `DELETE_MANY` filters
+This package makes usage of the awesome `qs` querystring parsing library.
 
 Default: `brackets`
 Options: `indices`, `repeat`, `comma`
@@ -153,3 +154,4 @@ Options: `indices`, `repeat`, `comma`
 ## Contributors
 * [TMiguelT](https://github.com/TMiguelT)
 * [hootbah](https://github.com/hootbah)
+* [mrclayman](https://github.com/mrclayman)

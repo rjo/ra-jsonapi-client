@@ -7,6 +7,7 @@ import {
   CREATE,
   UPDATE,
   DELETE,
+  DELETE_MANY,
   GET_MANY,
   GET_MANY_REFERENCE,
 } from './actions';
@@ -94,6 +95,16 @@ export default (apiUrl, userSettings = {}) => (type, resource, params) => {
       url = `${apiUrl}/${resource}/${params.id}`;
       options.method = 'DELETE';
       break;
+
+    case DELETE_MANY: {
+      const query = stringify({
+        'filter[id]': params.ids,
+      }, { arrayFormat: settings.arrayFormat });
+      options.method = 'DELETE';
+
+      url = `${apiUrl}/${resource}?${query}`;
+      break;
+    }
 
     case GET_MANY: {
       const query = stringify({
@@ -201,6 +212,12 @@ export default (apiUrl, userSettings = {}) => (type, resource, params) => {
           return {
             data: { id: params.id },
           };
+        }
+
+        case DELETE_MANY: {
+          return {
+            data: response.data.data,
+          }
         }
 
         default:

@@ -101,7 +101,8 @@ export default (apiUrl, userSettings = {}) => (type, resource, params) => {
         'filter[id]': params.ids,
       }, { arrayFormat: settings.arrayFormat });
       options.method = 'DELETE';
-
+      console.log("DELETE QUERY");
+      console.log(query);
       url = `${apiUrl}/${resource}?${query}`;
       break;
     }

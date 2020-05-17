@@ -1,5 +1,5 @@
 {
-  "name": "ra-jsonapi-client",
+  "name": "rjo-ra-jsonapi-client",
   "version": "0.6.1",
   "description": "JSON API data provider for react-admin.",
   "main": "build/index.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rjo/ra-jsonapi-client.git"
+    "url": "https://github.com/rjo/ra-jsonapi-client.git#delete-many-support"
   },
   "keywords": [
     "react-admin",
